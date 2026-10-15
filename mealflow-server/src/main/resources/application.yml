@@ -1,0 +1,28 @@
+server:
+  port: ${SERVER_PORT:8082}
+spring:
+  application:
+    name: mealflow
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    druid:
+      driver-class-name: ${mealflow.datasource.driver-class-name}
+      url: jdbc:mysql://${mealflow.datasource.host}:${mealflow.datasource.port}/${mealflow.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${mealflow.datasource.username}
+      password: ${mealflow.datasource.password}
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: io.github.spylent1.mealflow.entity
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    io.github.spylent1.mealflow: ${APP_LOG_LEVEL:info}
+mealflow:
+  jwt:
+    admin-secret-key: ${JWT_ADMIN_SECRET}
+    admin-ttl: ${JWT_ADMIN_TTL:7200000}
+    admin-token-name: token
