@@ -1,0 +1,8 @@
+mealflow:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    host: ${DB_HOST:localhost}
+    port: ${DB_PORT:3306}
+    database: ${DB_NAME:mealflow}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD}
