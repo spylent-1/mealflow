@@ -11,6 +11,7 @@
 - Java 包、实体别名、Mapper XML namespace、Swagger 扫描同步迁移。
 - 自定义配置前缀从 `sky.*` 调整为 `mealflow.*`，数据库凭据和 JWT 密钥改用环境变量。
 - 原 `/admin/employee/**` 路由与 `token` 请求头保持兼容。
+- 删除重复的 Web Starter 声明，修复云端 Maven 严格依赖校验失败。
 
 ## 验证边界
 
