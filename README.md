@@ -46,7 +46,7 @@ docs/             工程决策和验证记录
 准备 JDK 17、Maven 3.9 和 MySQL。
 
 ```powershell
-git clone https://github.com/spylent-1/sky-takeout-springboot.git mealflow
+git clone https://github.com/spylent-1/mealflow.git mealflow
 cd mealflow
 $env:DB_PASSWORD = "你的本地数据库密码"
 $env:JWT_ADMIN_SECRET = "替换为足够长的本地随机密钥"
